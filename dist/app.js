@@ -10073,18 +10073,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		theme: 'cssedit'
 	})
 
-	const highlightCode = __WEBPACK_IMPORTED_MODULE_9_lodash_debounce___default()(() => {
+	const highlightCode = () => {
 		for (const code of output.querySelectorAll('pre > code')) {
 			__WEBPACK_IMPORTED_MODULE_7_highlight_js___default.a.highlightBlock(code)
 		}
-	}, 200)
+	}
+	const debouncedHighlightCode = __WEBPACK_IMPORTED_MODULE_9_lodash_debounce___default()(highlightCode, 200)
 
 	editor.on('change', (cm) => {
 		output.innerHTML = __WEBPACK_IMPORTED_MODULE_5_marked___default()(cm.getValue())
-		highlightCode()
+		debouncedHighlightCode()
 	})
 
-	output.innerHTML = __WEBPACK_IMPORTED_MODULE_5_marked___default()(cm.getValue())
+	output.innerHTML = __WEBPACK_IMPORTED_MODULE_5_marked___default()(editor.getValue())
 	highlightCode()
 })
 
