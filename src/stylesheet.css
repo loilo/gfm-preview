@@ -16,6 +16,8 @@ body {
 	flex-shrink: 0;
 	flex-basis: 50%;
 	width: 50%;
+	height: 100vh;
+	overflow: auto;
 	padding: 1em;
 	box-sizing: border-box;
 }
