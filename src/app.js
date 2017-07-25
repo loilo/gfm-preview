@@ -27,4 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		output.innerHTML = marked(cm.getValue())
 		highlightCode()
 	})
+
+	output.innerHTML = marked(cm.getValue())
+	highlightCode()
 })
