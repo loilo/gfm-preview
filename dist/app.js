@@ -10040,9 +10040,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_codemirror_lib_codemirror_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_codemirror_lib_codemirror_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme_cssedit_css__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme_cssedit_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__theme_cssedit_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_highlight_js_styles_github_css__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_highlight_js_styles_github_css__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_highlight_js_styles_github_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_highlight_js_styles_github_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stylesheet_css__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stylesheet_css__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stylesheet_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__stylesheet_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_marked__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_marked___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_marked__);
@@ -10083,6 +10083,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		output.innerHTML = __WEBPACK_IMPORTED_MODULE_5_marked___default()(cm.getValue())
 		highlightCode()
 	})
+
+	output.innerHTML = __WEBPACK_IMPORTED_MODULE_5_marked___default()(cm.getValue())
+	highlightCode()
 })
 
 /***/ }),
@@ -10336,8 +10339,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!./stylesheet.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!./stylesheet.css");
+		module.hot.accept("!!../../css-loader/index.js!./github.css", function() {
+			var newContent = require("!!../../css-loader/index.js!./github.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -10352,10 +10355,10 @@ if(false) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
 // imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700);", ""]);
+
 
 // module
-exports.push([module.i, "html, body {\n\tmargin: 0;\n\tpadding: 0;\n}\n\nbody {\n\tfont-family: 'Roboto Mono', Menlo, Monaco, Consolas, monospace;\n\tdisplay: flex;\n\theight: 100vh;\n}\n\n.editor, .markdown-body {\n\tflex-grow: 0;\n\tflex-shrink: 0;\n\tflex-basis: 50%;\n\tpadding: 1em;\n\tbox-sizing: border-box;\n}\n\n.CodeMirror {\n\theight: 100%;\n    font-family: inherit;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 1.6;\n}\n\n.hljs-attr {\n    color: #63a35c;\n}\n\n.hljs-meta {\n    color: inherit;\n    font-weight: inherit;\n}\n\n.hljs-comment, .hljs-quote {\n    color: #969896;\n    font-style: normal;\n}\n\n.hljs-keyword {\n    color: #a71d5d;\n    font-weight: inherit;\n}\n\n.hljs-title {\n    color: #0086b3;\n    font-weight: inherit;\n}\n\n.hljs-string {\n    color: #183691;\n}", ""]);
+exports.push([module.i, "/*\n\ngithub.com style (c) Vasily Polovnyov <vast@whiteants.net>\n\n*/\n\n.hljs {\n  display: block;\n  overflow-x: auto;\n  padding: 0.5em;\n  color: #333;\n  background: #f8f8f8;\n}\n\n.hljs-comment,\n.hljs-quote {\n  color: #998;\n  font-style: italic;\n}\n\n.hljs-keyword,\n.hljs-selector-tag,\n.hljs-subst {\n  color: #333;\n  font-weight: bold;\n}\n\n.hljs-number,\n.hljs-literal,\n.hljs-variable,\n.hljs-template-variable,\n.hljs-tag .hljs-attr {\n  color: #008080;\n}\n\n.hljs-string,\n.hljs-doctag {\n  color: #d14;\n}\n\n.hljs-title,\n.hljs-section,\n.hljs-selector-id {\n  color: #900;\n  font-weight: bold;\n}\n\n.hljs-subst {\n  font-weight: normal;\n}\n\n.hljs-type,\n.hljs-class .hljs-title {\n  color: #458;\n  font-weight: bold;\n}\n\n.hljs-tag,\n.hljs-name,\n.hljs-attribute {\n  color: #000080;\n  font-weight: normal;\n}\n\n.hljs-regexp,\n.hljs-link {\n  color: #009926;\n}\n\n.hljs-symbol,\n.hljs-bullet {\n  color: #990073;\n}\n\n.hljs-built_in,\n.hljs-builtin-name {\n  color: #0086b3;\n}\n\n.hljs-meta {\n  color: #999;\n  font-weight: bold;\n}\n\n.hljs-deletion {\n  background: #fdd;\n}\n\n.hljs-addition {\n  background: #dfd;\n}\n\n.hljs-emphasis {\n  font-style: italic;\n}\n\n.hljs-strong {\n  font-weight: bold;\n}\n", ""]);
 
 // exports
 
@@ -10381,8 +10384,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../css-loader/index.js!./github.css", function() {
-			var newContent = require("!!../../css-loader/index.js!./github.css");
+		module.hot.accept("!!../node_modules/css-loader/index.js!./stylesheet.css", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js!./stylesheet.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -10397,10 +10400,10 @@ if(false) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700);", ""]);
 
 // module
-exports.push([module.i, "/*\n\ngithub.com style (c) Vasily Polovnyov <vast@whiteants.net>\n\n*/\n\n.hljs {\n  display: block;\n  overflow-x: auto;\n  padding: 0.5em;\n  color: #333;\n  background: #f8f8f8;\n}\n\n.hljs-comment,\n.hljs-quote {\n  color: #998;\n  font-style: italic;\n}\n\n.hljs-keyword,\n.hljs-selector-tag,\n.hljs-subst {\n  color: #333;\n  font-weight: bold;\n}\n\n.hljs-number,\n.hljs-literal,\n.hljs-variable,\n.hljs-template-variable,\n.hljs-tag .hljs-attr {\n  color: #008080;\n}\n\n.hljs-string,\n.hljs-doctag {\n  color: #d14;\n}\n\n.hljs-title,\n.hljs-section,\n.hljs-selector-id {\n  color: #900;\n  font-weight: bold;\n}\n\n.hljs-subst {\n  font-weight: normal;\n}\n\n.hljs-type,\n.hljs-class .hljs-title {\n  color: #458;\n  font-weight: bold;\n}\n\n.hljs-tag,\n.hljs-name,\n.hljs-attribute {\n  color: #000080;\n  font-weight: normal;\n}\n\n.hljs-regexp,\n.hljs-link {\n  color: #009926;\n}\n\n.hljs-symbol,\n.hljs-bullet {\n  color: #990073;\n}\n\n.hljs-built_in,\n.hljs-builtin-name {\n  color: #0086b3;\n}\n\n.hljs-meta {\n  color: #999;\n  font-weight: bold;\n}\n\n.hljs-deletion {\n  background: #fdd;\n}\n\n.hljs-addition {\n  background: #dfd;\n}\n\n.hljs-emphasis {\n  font-style: italic;\n}\n\n.hljs-strong {\n  font-weight: bold;\n}\n", ""]);
+exports.push([module.i, "html, body {\n\tmargin: 0;\n\tpadding: 0;\n}\n\nbody {\n\tfont-family: 'Roboto Mono', Menlo, Monaco, Consolas, monospace;\n\tdisplay: flex;\n\theight: 100vh;\n}\n\n.editor, .markdown-body {\n\tflex-grow: 0;\n\tflex-shrink: 0;\n\tflex-basis: 50%;\n\tpadding: 1em;\n\tbox-sizing: border-box;\n}\n\n.CodeMirror {\n\theight: 100%;\n    font-family: inherit;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 1.6;\n}\n\n.hljs-attr {\n    color: #63a35c;\n}\n\n.hljs-meta {\n    color: inherit;\n    font-weight: inherit;\n}\n\n.hljs-comment, .hljs-quote {\n    color: #969896;\n    font-style: normal;\n}\n\n.hljs-keyword {\n    color: #a71d5d;\n    font-weight: inherit;\n}\n\n.hljs-title {\n    color: #0086b3;\n    font-weight: inherit;\n}\n\n.hljs-string {\n    color: #183691;\n}", ""]);
 
 // exports
 
