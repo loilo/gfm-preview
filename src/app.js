@@ -17,17 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		theme: 'cssedit'
 	})
 
-	const highlightCode = debounce(() => {
+	const highlightCode = () => {
 		for (const code of output.querySelectorAll('pre > code')) {
 			hljs.highlightBlock(code)
 		}
-	}, 200)
+	}
+	const debouncedHighlightCode = debounce(highlightCode, 200)
 
 	editor.on('change', (cm) => {
 		output.innerHTML = marked(cm.getValue())
-		highlightCode()
+		debouncedHighlightCode()
 	})
 
-	output.innerHTML = marked(cm.getValue())
+	output.innerHTML = marked(editor.getValue())
 	highlightCode()
 })
