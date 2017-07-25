@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const output = document.getElementById('output')
 	const editor = Codemirror.fromTextArea(document.getElementById('input'), {
 		mode: 'markdown',
-		theme: 'cssedit'
+		theme: 'cssedit',
+		lineWrapping: true
 	})
 
 	const highlightCode = () => {
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const debouncedHighlightCode = debounce(highlightCode, 200)
 
 	editor.on('change', (cm) => {
+		window.onbeforeunload = () => 'Really?'
 		output.innerHTML = marked(cm.getValue())
 		debouncedHighlightCode()
 	})
